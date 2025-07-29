@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+  </head>
+  <body>
+    <a href="#"></a>
+  </body>
+  <script>
+    console.log(window); // It returns window object("It's a global object.")
+
+    console.log(window.document); // It returns html document but if you want to access its prototype then use below method
+
+    console.dir(document); // It's very general to use document that's why there is no need to use window.document we can dirtly use document
+
+    console.log(document.baseURI); // It returns base url of the document
+
+    console.log(document.links); // It returns an HTML collection of the links that exists in the document
+  </script>
+</html>
