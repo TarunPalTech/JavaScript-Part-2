@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Nodes</title>
+  </head>
+  <body>
+    <h1 id="myHeading" class="importantText">Lorem ipsum dolor sit amet.</h1>
+
+    <h2>Lorem, ipsum dolor <span style="display: none">Lorem, ipsum.</span></h2>
+  </body>
+  <script>
+    let textValue = document.getElementById("myHeading");
+
+    console.log(textValue.id); // returns value of id attribute
+    console.log(textValue.className); // returns value of class attribute
+
+    console.log(textValue.getAttribute("id"));
+    console.log(textValue.getAttribute("class"));
+
+    console.log(textValue.innerText);
+    console.log(textValue.textContent);
+    console.log(textValue.innerHTML);
+
+    /* Difference between innerText, textContent, and innerHTML */
+    let h2 = document.querySelector("h2");
+    console.log(h2.innerText); // It returns only visible part of the text node
+
+    console.log(h2.textContent); // It returns whole content
+
+    console.log(h2.innerHTML); // It return text with html element
+  </script>
+</html>
