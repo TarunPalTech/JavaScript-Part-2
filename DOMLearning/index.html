@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Selection</title>
+  </head>
+  <body>
+    <h1 id="myHeading">This is my first heading.</h1>
+
+    <span class="box">1</span>
+    <span class="box">2</span>
+    <span class="box">3</span>
+    <span class="box">4</span>
+
+    <ul>
+      <li>JavaScript</li>
+      <li>Python</li>
+    </ul>
+
+    <p id="firstParagraph">This is my paragraph.</p>
+
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, dolorem.
+    </div>
+    <div>Ad qui quisquam laudantium optio cum magni culpa dolores alias.</div>
+    <div>
+      Facilis temporibus magnam eligendi, quasi odio hic exercitationem quod ea!
+    </div>
+    <div>Sint vel id iure? Eos magnam reiciendis corporis amet assumenda.</div>
+    <div>
+      Accusantium sequi nostrum quasi consectetur deserunt debitis porro amet
+      voluptatum.
+    </div>
+  </body>
+
+  <script>
+    /* Element selection */
+
+    // By using ID(Unique Identifier)
+    let myHeading = document.getElementById("myHeading");
+    console.log(myHeading);
+
+    // By using Class Name (Returns an HTML collection)
+    let box = document.getElementsByClassName("box");
+    console.log(box);
+
+    // By TagName (Returns an HTML collection)
+    let myList = document.getElementsByTagName("li");
+    console.log(myList);
+
+    // By Query Selector(It selects only first element based on css selector)
+    let paragraph = document.querySelector("#firstParagraph");
+    console.log(paragraph);
+
+    // By Query Selector All(Returns a NodeList)
+    let divs = document.querySelectorAll("div");
+    console.log(divs);
+  </script>
+</html>
