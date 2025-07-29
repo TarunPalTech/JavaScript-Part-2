@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modify List Items</title>
+  </head>
+  <body style="font-size: x-large">
+    <form action="">
+      <label for="language"> Enter language name: </label>
+      <input type="text" name="language" id="language" />
+      <br /><br />
+      <button id="add" type="submit">Add New Language</button>
+      <button id="delete">Delete Language</button>
+    </form>
+
+    <ol id="myList">
+      <li>Python</li>
+    </ol>
+  </body>
+  <script>
+    function addLanguage(language) {
+      let newLanguage = document.createElement("li");
+      let addLanguage = document.createTextNode(language);
+      newLanguage.appendChild(addLanguage);
+      document.getElementById("myList").appendChild(newLanguage);
+    }
+
+    function deleteLanguage() {
+      let deletelanguage = document.getElementById("myList").lastElementChild;
+      deletelanguage.remove();
+    }
+
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        if (e.target.id == "add") {
+          addLanguage(document.getElementById("language").value);
+        } else {
+          deleteLanguage();
+        }
+      });
+    });
+  </script>
+</html>
