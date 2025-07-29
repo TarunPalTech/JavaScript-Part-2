@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Element Creation</title>
+  </head>
+  <body></body>
+
+  <script>
+    // Method 1st
+    let newDivElement = document.createElement("div");
+    console.log(newDivElement);
+
+    newDivElement.style.padding = "15px";
+    newDivElement.style.backgroundColor = "orange";
+    newDivElement.style.fontSize = "x-large";
+    newDivElement.id = "content";
+    newDivElement.className = "loremText";
+    newDivElement.innerHTML =
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quis, quidem officia illo voluptatibus expedita veniam facilis ipsum accusantium consequuntur rerum eum excepturi impedit magnam fuga doloribus eaque! Odit, esse.";
+    document.body.appendChild(newDivElement);
+
+    // Method 2nd
+    let paragraph = document.createElement("p");
+    console.log(paragraph);
+    paragraph.setAttribute("id", "fakeText");
+    paragraph.setAttribute("class", "dummyText");
+    paragraph.setAttribute(
+      "style",
+      "font-size: x-large; background-color: blue;"
+    );
+
+    // let addText = document.createTextNode("This is my first paragraph.");
+    // paragraph.appendChild(addText);
+    // document.body.appendChild(paragraph);
+
+    paragraph.appendChild(document.createTextNode("This is my paragraph"));
+    document.body.appendChild(paragraph);
+  </script>
+</html>
