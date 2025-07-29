@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="10" />
+    <!-- // remember it -->
+    <title>Update HTML Eelement</title>
+  </head>
+  <body>
+    <p class="loremText" id="firstParagraph">Lorem ipsum dolor sit amet.</p>
+  </body>
+  <script>
+    let paragraph = document.querySelector("#firstParagraph");
+    console.log(paragraph);
+    // paragraph.setAttribute("class", "dummyText"); // it overwrites the previous value of class attribu
+
+    // If you want to use previous value of class attribute then must write previous value
+
+    paragraph.setAttribute("class", "loremText dummyText");
+
+    // Text updation
+
+    // paragraph.innerHTML = "This is a paragraph";  // not a good approach because it travers the whole tree and brings data and then puts new content there but below method directly updates value without using round method
+
+    let updatedText = document.createTextNode("This is a paragraph.");
+    paragraph.replaceWith(updatedText);
+  </script>
+</html>
