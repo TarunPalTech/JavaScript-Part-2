@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Deletion</title>
+  </head>
+  <body>
+    <h1>Element Deletion</h1>
+    <p
+      class="loremText"
+      id="paragraph"
+      style="background-color: orange; padding: 15px; font-size: xx-large">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem minus
+      blanditiis eius harum, maxime dolore ex at veniam nihil consectetur
+      suscipit excepturi eveniet iusto sequi quis consequatur. Error, quod rem.
+    </p>
+  </body>
+  <script>
+    let paragraph = document.getElementById("paragraph");
+    paragraph.remove();
+  </script>
+</html>
