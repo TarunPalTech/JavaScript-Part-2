@@ -21,7 +21,7 @@
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quis, quidem officia illo voluptatibus expedita veniam facilis ipsum accusantium consequuntur rerum eum excepturi impedit magnam fuga doloribus eaque! Odit, esse.";
     document.body.appendChild(newDivElement);
 
-    // Method 2nd (This approach is recommended because first approch traverse the whole tree again and again.
+    // Method 2nd (This approach is recommended because first approch traverse the whole tree again and again(setAttribute is the best alternate for .id or .className or .style).
     let paragraph = document.createElement("p");
     console.log(paragraph);
     paragraph.setAttribute("id", "fakeText");
