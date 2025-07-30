@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous JavaScript</title>
+  </head>
+  <body>
+    <button id="press-btn">Click Here!</button>
+  </body>
+  <script>
+    // setTimeout(() => {
+    //   console.log("Tarun Pal"); // It will be execute after 2 seconds
+    // }, 2000);
+
+    // Another method to perform the same task
+    function printMyName() {
+      console.log("Second method: Tarun Pal");
+    }
+
+    setTimeout(printMyName, 2000); // We are passing the reference here because because it is an handler so there is no need to call it. Handler is also a callback function.
+
+    // If you want to stop setTimeOut() then use clearTimeOut() function...
+
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = "yellow";
+    }
+
+    let stopChangingColor = setTimeout(changeBackgroundColor, 3000);
+
+    document.getElementById("press-btn").addEventListener("click", () => {
+      clearTimeout(stopChangingColor);
+      console.log("Stopped");
+    });
+  </script>
+</html>
