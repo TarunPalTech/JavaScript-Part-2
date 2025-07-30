@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous Programming</title>
+  </head>
+  <body>
+    <h1>Click below buttons to start and stop printing in the console</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setInterval(() => {
+    //   console.log("Tarun Pal", Date.now());
+    // }, 2000);
+
+    // Another method
+
+    // let sayDate = function () {
+    //   console.log("2nd - Tarun Pal", Date.now());
+    // };
+
+    // setInterval(sayDate, 2000);
+
+    // setInterval vs ClearInterval
+
+    function sayMyName() {
+        console.log("Tarun Pal", Date.now().toLocaleString());
+    }
+    
+    let intervalId;
+    document.getElementById("start").addEventListener("click", () => {
+      intervalId = setInterval(sayMyName, 2000);
+    });
+    document.getElementById("stop").addEventListener("click", () => {
+      clearInterval(intervalId);
+    });
+  </script>
+</html>
